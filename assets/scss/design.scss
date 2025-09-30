@@ -15,4 +15,32 @@ $cor-text-title : #FFFFFF;
 
 body {
     background-color: $cor-bg-body;
+    font-family: $font-texto;
+    color: $cor-text-body;
+    
+}
+
+.header {
+    background-color: $cor-bg-header;
+    height: 74px;
+    padding-left: 100px;
+    padding-right: 100px;
+    border-radius: 6px;
+}
+
+.right{
+    img{
+        width: 350px;
+        height: 350px;
+        border-radius: 100%;
+        object-fit: cover;
+    }
+}
+
+.unstyled-list {
+    list-style: none;
+}
+
+.unstyled-link {
+    text-decoration: none;
 }
