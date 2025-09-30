@@ -7,12 +7,22 @@ body {
   color: #9C9C9C;
 }
 
-.header {
+.header .container {
+  box-sizing: border-box;
   background-color: #1B1B1B;
   height: 74px;
   padding-left: 100px;
   padding-right: 100px;
   border-radius: 6px;
+}
+
+.menu-social a {
+  color: #9C9C9C;
+  font-size: 24px;
+}
+
+.left {
+  width: 568px;
 }
 
 .right img {
@@ -30,11 +40,42 @@ body {
   text-decoration: none;
 }
 
+/** Estilo tipografia **/
+.heading, .heading-2, .heading-1 {
+  color: #FFFFFF;
+  font-family: "Raleway", sans-serif;
+}
+
+.heading-1 {
+  font-size: 44px;
+  font-weight: 800;
+}
+
+.heading-2 {
+  font-size: 24px;
+  font-weight: 200;
+}
+
+.body-1 {
+  font-size: 16px;
+  color: #FFFFFF;
+  font-weight: 800;
+}
+
+.body-2, .menu-navegacao a {
+  font-size: 14px;
+  color: #9C9C9C;
+  font-weight: 400;
+}
+
 /** Breakpoints **/
+.gap-32, .flex-list {
+  gap: 32px;
+}
+
 .flex-list {
   padding: 0;
   margin: 0;
-  gap: 32px;
 }
 
 .center, .container {
@@ -42,11 +83,15 @@ body {
   margin-right: auto;
 }
 
+.header {
+  margin-bottom: 64px;
+}
+
 .container {
   max-width: 1200px;
 }
 
-.d-flex, .flex-list {
+.d-flex, .flex-list, .container {
   display: flex;
 }
 
@@ -60,6 +105,27 @@ body {
 
 .space-evenly {
   justify-content: space-evenly;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+/** Layout tipografia **/
+.heading, .heading-2, .heading-1 {
+  margin-top: 24px;
+  margin-bottom: 24px;
+  line-height: 100%;
+}
+
+.body, .body-2, .body-1 {
+  margin-top: 24px;
+  margin-bottom: 24px;
+  line-height: 160%;
 }
 
 /*# sourceMappingURL=style.css.map */

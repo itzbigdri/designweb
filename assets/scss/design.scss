@@ -21,11 +21,31 @@ body {
 }
 
 .header {
-    background-color: $cor-bg-header;
-    height: 74px;
-    padding-left: 100px;
-    padding-right: 100px;
-    border-radius: 6px;
+    .container{              
+        box-sizing: border-box;              
+        background-color: $cor-bg-header;
+        height: 74px;
+        padding-left: 100px;
+        padding-right: 100px;
+        border-radius: 6px;
+    }
+}
+
+.menu-navegacao {
+    a {
+        @extend .body-2
+    }
+}
+
+.menu-social {
+    a {
+        color: $cor-text-body;
+        font-size: 24px;
+    }
+}
+
+.left {
+    width: 568px;
 }
 
 .right{
@@ -43,4 +63,35 @@ body {
 
 .unstyled-link {
     text-decoration: none;
+}
+
+/** Estilo tipografia **/
+
+.heading {
+    color: $cor-text-title;
+    font-family: $font-titulo;
+}
+
+.heading-1 {
+    @extend .heading;
+    font-size: 44px;
+    font-weight: 800;
+}
+
+.heading-2{
+    @extend .heading;
+    font-size: 24px;
+    font-weight: 200;
+}
+
+.body-1 {
+    font-size: 16px;
+    color: $cor-text-title;
+    font-weight: 800;
+}
+
+.body-2 {
+    font-size: 14px;
+    color: $cor-text-body;
+    font-weight: 400;
 }

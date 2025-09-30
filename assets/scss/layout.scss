@@ -2,11 +2,15 @@
 
 $break-desktop: 1200px;
 
+.gap-32 {
+    gap: 32px
+}
+
 .flex-list{
     padding: 0;
     margin: 0;
     @extend .d-flex;
-    gap: 32px;
+    @extend .gap-32;
 }
 
 .center {
@@ -14,9 +18,14 @@ $break-desktop: 1200px;
     margin-right: auto;
 }
 
+.header {
+    margin-bottom: 64px;
+}
+
 .container {
     max-width: $break-desktop;
-    @extend .center
+    @extend .center; 
+    @extend .d-flex;
 }
 
 .d-flex {
@@ -35,3 +44,40 @@ $break-desktop: 1200px;
     justify-content: space-evenly;
 }
 
+.align-center {
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+/** Layout tipografia **/
+
+.heading {
+    margin-top: 24px;
+    margin-bottom: 24px;
+    line-height: 100%;
+}
+
+.heading-1 {
+    @extend .heading;
+}
+
+.heading-2 {
+    @extend .heading;
+}
+
+.body {
+    margin-top: 24px;
+    margin-bottom: 24px;
+    line-height: 160%;
+}
+
+.body-1 {
+    @extend .body;
+}
+
+.body-2 {
+    @extend .body;
+}
