@@ -18,11 +18,26 @@ body {
 
 .menu-social a {
   color: #9C9C9C;
-  font-size: 24px;
+  font-size: 20px;
 }
 
 .left {
   width: 568px;
+}
+.left button {
+  padding-left: 64px;
+  padding-right: 64px;
+  height: 64px;
+  background-color: #3F8E00;
+  box-sizing: border-box;
+  border: 2px solid #62BA1B;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 8px 30px rgba(63, 142, 0, 0.5019607843);
+  transition: transform 0.1s ease;
+}
+.left button:active {
+  transform: scale(0.95);
 }
 
 .right img {
@@ -59,7 +74,7 @@ body {
 .body-1 {
   font-size: 16px;
   color: #FFFFFF;
-  font-weight: 800;
+  font-weight: 700;
 }
 
 .body-2, .menu-navegacao a {
@@ -113,6 +128,10 @@ body {
 
 .justify-center {
   justify-content: center;
+}
+
+.mb-64 {
+  margin-bottom: 64px;
 }
 
 /** Layout tipografia **/

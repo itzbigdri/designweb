@@ -40,12 +40,27 @@ body {
 .menu-social {
     a {
         color: $cor-text-body;
-        font-size: 24px;
+        font-size: 20px;
     }
 }
 
 .left {
     width: 568px;
+    button {
+        padding-left: 64px;
+        padding-right: 64px;
+        height: 64px;
+        background-color: $cor-bg-button;
+        box-sizing: border-box;
+        border: 2px solid $cor-border-button;
+        border-radius: 4px;
+        cursor: pointer;
+        box-shadow: 0 8px 30px #3F8E0080;
+        transition: transform .1s ease;
+    }
+    button:active {
+        transform: scale(0.95);
+    }
 }
 
 .right{
@@ -87,7 +102,7 @@ body {
 .body-1 {
     font-size: 16px;
     color: $cor-text-title;
-    font-weight: 800;
+    font-weight: 700;
 }
 
 .body-2 {
