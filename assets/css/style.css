@@ -55,6 +55,11 @@ body {
   text-decoration: none;
 }
 
+.job-list li {
+  border: 2px solid #1B1B1B;
+  border-radius: 4px;
+}
+
 /** Estilo tipografia **/
 .heading, .heading-2, .heading-1 {
   color: #FFFFFF;
@@ -130,8 +135,27 @@ body {
   justify-content: center;
 }
 
+.flex-column {
+  flex-direction: column;
+}
+
 .mb-64 {
   margin-bottom: 64px;
+}
+
+.last-jobs {
+  box-sizing: border-box;
+  padding-right: 100px;
+  padding-left: 100px;
+}
+
+.job-list {
+  margin-top: 0;
+}
+.job-list li {
+  width: 160px;
+  height: 60px;
+  box-sizing: border-box;
 }
 
 /** Layout tipografia **/

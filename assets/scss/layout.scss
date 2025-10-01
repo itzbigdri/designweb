@@ -52,8 +52,27 @@ $break-desktop: 1200px;
     justify-content: center;
 }
 
+.flex-column {
+    flex-direction: column;
+}
+
 .mb-64{
     margin-bottom: 64px;
+}
+
+.last-jobs {
+    box-sizing: border-box;
+    padding-right: 100px;
+    padding-left: 100px;
+} 
+
+.job-list{
+    margin-top: 0;
+    li{
+        width: 160px;
+        height: 60px;
+        box-sizing: border-box;
+    }
 }
 
 /** Layout tipografia **/

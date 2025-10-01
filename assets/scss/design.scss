@@ -72,12 +72,21 @@ body {
     }
 }
 
+
+
 .unstyled-list {
     list-style: none;
 }
 
 .unstyled-link {
     text-decoration: none;
+}
+
+.job-list {
+    li{
+        border: 2px solid $cor-bg-header;
+        border-radius: 4px;
+    }
 }
 
 /** Estilo tipografia **/
