@@ -13,7 +13,8 @@ body {
   height: 74px;
   padding-left: 100px;
   padding-right: 100px;
-  border-radius: 6px;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
 }
 
 .menu-social a {
