@@ -38,6 +38,17 @@ body {
     }
 }
 
+.responsive-menu {
+    display: none;
+    gap: 16px;
+    .menu-button {
+        border: none;
+        background: none;
+        font-size: 20px;
+        color: $cor-text-body;
+    }
+}
+
 .menu-social {
     a {
         color: $cor-text-body;
@@ -65,6 +76,7 @@ body {
 }
 
 .right{
+    margin: 0;
     img{
         width: 350px;
         height: 350px;

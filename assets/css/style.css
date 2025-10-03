@@ -17,6 +17,17 @@ body {
   border-bottom-right-radius: 6px;
 }
 
+.responsive-menu {
+  display: none;
+  gap: 16px;
+}
+.responsive-menu .menu-button {
+  border: none;
+  background: none;
+  font-size: 20px;
+  color: #9C9C9C;
+}
+
 .menu-social a {
   color: #9C9C9C;
   font-size: 20px;
@@ -41,6 +52,9 @@ body {
   transform: scale(0.95);
 }
 
+.right {
+  margin: 0;
+}
 .right img {
   width: 350px;
   height: 350px;
@@ -161,15 +175,34 @@ body {
 
 /** Layout tipografia **/
 .heading, .heading-2, .heading-1 {
-  margin-top: 24px;
-  margin-bottom: 24px;
+  margin-top: 0;
+  margin-bottom: 10px;
   line-height: 100%;
 }
 
 .body, .body-2, .body-1 {
-  margin-top: 24px;
-  margin-bottom: 24px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   line-height: 160%;
+}
+
+@media (max-width: 768px) {
+  body {
+    margin: 0;
+  }
+  .header .container {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  .header .container .menu-navegacao {
+    display: none;
+  }
+  .responsive-menu {
+    display: flex;
+  }
+  .personal-section {
+    flex-direction: column-reverse;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

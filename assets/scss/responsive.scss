@@ -1,6 +1,28 @@
 
-$break-mobile: 668px;
+$break-mobile: 768px;
 
 @media (max-width: $break-mobile) {
-    
+
+    body {
+        margin: 0;
+    }
+
+    .header{
+        .container{
+            padding-left: 24px;
+            padding-right: 24px;
+            .menu-navegacao {
+                display: none;
+            }
+        }
+    }
+
+    .responsive-menu {
+        display: flex;
+    }
+
+    .personal-section {
+        flex-direction: column-reverse;
+    }
 }
+
