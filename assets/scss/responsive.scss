@@ -21,8 +21,14 @@ $break-mobile: 768px;
         display: flex;
     }
 
+    .container{
+        max-width: 100%;
+    }
+
     .personal-section {
         flex-direction: column-reverse;
+        .left {
+            width: 350px;
+        }
     }
 }
-

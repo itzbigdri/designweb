@@ -40,6 +40,7 @@ body {
   padding-left: 64px;
   padding-right: 64px;
   height: 64px;
+  max-width: 360px;
   background-color: #3F8E00;
   box-sizing: border-box;
   border: 2px solid #62BA1B;
@@ -126,6 +127,13 @@ body {
   max-width: 1200px;
 }
 
+.left {
+  max-width: 100%;
+}
+.left .text-content .titles {
+  margin-bottom: 20px;
+}
+
 .d-flex, .flex-list, .container {
   display: flex;
 }
@@ -175,7 +183,7 @@ body {
 
 /** Layout tipografia **/
 .heading, .heading-2, .heading-1 {
-  margin-top: 0;
+  margin-top: 10px;
   margin-bottom: 10px;
   line-height: 100%;
 }
@@ -200,8 +208,14 @@ body {
   .responsive-menu {
     display: flex;
   }
+  .container {
+    max-width: 100%;
+  }
   .personal-section {
     flex-direction: column-reverse;
+  }
+  .personal-section .left {
+    width: 350px;
   }
 }
 
