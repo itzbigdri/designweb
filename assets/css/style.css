@@ -138,7 +138,7 @@ body {
   display: flex;
 }
 
-.space-between {
+.space-between, .job-list {
   justify-content: space-between;
 }
 
@@ -168,15 +168,15 @@ body {
 
 .last-jobs {
   box-sizing: border-box;
-  padding-right: 100px;
-  padding-left: 100px;
+  max-width: 1200px;
 }
 
 .job-list {
-  margin-top: 0;
+  margin: 0;
+  padding: 0;
 }
 .job-list li {
-  width: 160px;
+  width: 170px;
   height: 60px;
   box-sizing: border-box;
 }
@@ -196,7 +196,7 @@ body {
 
 @media (max-width: 768px) {
   body {
-    margin: 0;
+    margin: 0 0 72px 0;
   }
   .header .container {
     padding-left: 24px;
@@ -216,6 +216,17 @@ body {
   }
   .personal-section .left {
     width: 350px;
+  }
+  .last-jobs {
+    max-width: 350px;
+    justify-content: flex-start;
+  }
+  .job-list {
+    overflow-x: auto;
+    gap: 24px;
+  }
+  .job-list li {
+    min-width: 160px;
   }
 }
 
