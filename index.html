@@ -5,25 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio Pessoal</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body>
-    <header class="header">
-        <nav class="container space-between align-center">
-            <ul class="menu menu-navegacao unstyled-list flex-list">
+<body class="font-[IBM_Plex_Mono] bg-zinc-950 text-white">
+    <header class="bg-zinc-900 rounded-b-md max-w-300 px-25 py-7 mt-2 mb-16 mx-auto text-zinc-400 max-md:mt-0 max-md:mb-12 max-md:px-6">
+        <nav class="flex justify-between items-center">
+            <ul class="flex gap-8 text-sm max-md:hidden">
                 <li>
-                    <a href="#" class="unstyled-link">Estudos de casos</a>
+                    <a href="#">Estudos de casos</a>
                 </li>
 
                 <li>
-                    <a href="#" class="unstyled-link">Trabalhos</a>
+                    <a href="#">Trabalhos</a>
                 </li>
  
                 <li>
-                    <a href="#" class="unstyled-link">Entre em contato</a>
+                    <a href="#">Entre em contato</a>
                 </li>
             </ul>
-            <ul class="menu menu-social unstyled-list flex-list">
+            <ul class="flex gap-6 text-lg">
                 <li>
                     <a href="#">
                         <i class="fa-brands fa-linkedin-in"></i>
@@ -41,46 +42,39 @@
                         <i class="fa-brands fa-twitter"></i>
                     </a>
                 </li>
-                    
             </ul>
-            <div class="responsive-menu">
-                <button class="menu-button"><i class="fa-solid fa-bars"></i></button>
-                <p class="body-2">Menu</p>
+
+            <div class="hidden gap-6 max-md:flex">
+                <i class="fa-solid fa-bars text-xl"></i>
+                <p class="text-sm">Menu</p>
             </div>
         </nav>
     </header>
 
-    <main>
-
-        <section class="container personal-section space-between align-center mb-64 gap-32">
-            <div class="left d-flex justify-center flex-column gap-32">
-                <div class="text-content">
-                    <div class="titles">
-                        <h1 class="heading-1">Rodrigo Filho</h1>
-                        <h3 class="heading-2">Desenvolvedor Full-Stack</h3>
-                    </div>
-                    <p class="body-2">Sou um Full Stack em formação: do layout ao banco de dados. Conecto front e back sem ruído, com código limpo e usabilidade no radar. Traduzo lógica em interface e interface em lógica. Sem enrolação: construo, testo e entrego.</p>
-                </div>
-                <button class="body-1">
+    <main class="max-w-300 mx-auto max-md:max-w-[350px]">
+        <section class="flex justify-between items-center mb-16 max-md:flex-col-reverse">
+            <div class="max-w-150">
+                <h1 class="font-[Raleway] text-5xl font-extrabold mb-3">Rodrigo Filho</h1>
+                <h3 class="font-[Raleway] text-2xl font-extralight mb-5">Desenvolvedor Full-Stack</h3>
+                <p class="text-sm leading-[160%] text-zinc-400 mb-8">Sou um Full Stack em formação: do layout ao banco de dados. Conecto front e back sem ruído, com código limpo e usabilidade no radar. Traduzo lógica em interface e interface em lógica. Sem enrolação: construo, testo e entrego.</p>
+                <button class="w-100 bg-lime-700 py-5 font-bold rounded-sm border border-lime-500 shadow-[0_8px_30px_0] shadow-lime-800/50 max-md:w-full">
                     Vamos trabalhar juntos <i class="fa-solid fa-chevron-right"></i></i>
                 </button>
             </div>
-            <figure class="right">
-                <img src="assets/img/perfil.jpeg" alt="Foto de Rodrigo Filho">
+            <figure class="w-[350px] max-md:mb-8">
+                <img src="assets/img/perfil.jpeg" alt="Foto de Rodrigo Filho" class="rounded-full">
             </figure>
         </section>
-
-        <section class="center last-jobs flex-column">
-            <h5>Trabalhou em:</h5>
-            <ul class="d-flex job-list unstyled-list">
-                <li class="d-flex justify-center align-center"><img src="assets/img/img-job-1.png" alt="logo do clickup "></li>
-                <li class="d-flex justify-center align-center"><img src="assets/img/img-job-2.png" alt="logo do dropbox"></li>
-                <li class="d-flex justify-center align-center"><img src="assets/img/img-job-3.png" alt="logo do paychex"></li>
-                <li class="d-flex justify-center align-center "><img src="assets/img/img-job-4.png" alt="logo do elastic"></li>
-                <li class="d-flex justify-center align-center"><img src="assets/img/img-job-5.png" alt="logo do stripe"></li>
+        <section>
+            <h5 class="text-sm mb-5">Trabalhou em:</h5>
+            <ul class="flex justify-between max-md:overflow-x-auto max-md:gap-6">
+                <li class="w-40 h-16 border border-zinc-500 flex justify-center items-center rounded-xl flex-shrink-0" ><img class="w-20" src="assets/img/img-job-1.png" alt="logo do clickup"></li>
+                <li class="w-40 h-16 border border-zinc-500 flex justify-center items-center rounded-xl flex-shrink-0" ><img class="w-20" src="assets/img/img-job-2.png" alt="logo do dropbox"></li>
+                <li class="w-40 h-16 border border-zinc-500 flex justify-center items-center rounded-xl flex-shrink-0" ><img class="w-20" src="assets/img/img-job-3.png" alt="logo do paychex"></li>
+                <li class="w-40 h-16 border border-zinc-500 flex justify-center items-center rounded-xl flex-shrink-0" ><img class="w-20" src="assets/img/img-job-4.png" alt="logo do elastic"></li>
+                <li class="w-40 h-16 border border-zinc-500 flex justify-center items-center rounded-xl flex-shrink-0" ><img class="w-16" src="assets/img/img-job-5.png" alt="logo do stripe"></li>
             </ul>
         </section>
-
     </main>
 </body>
 </html>
