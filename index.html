@@ -3,35 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista 4 - Componentização e Reutilização Visual</title>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css"/>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
-    <section class="p-16 grid grid-cols-3 gap-6 mx-auto h-screen">
-        <article class="bg-slate-200 py-8 px-12 flex flex-col justify-between rounded-lg">
-            <div>
-                <h3 class="text-4xl font-semibold mb-6">A Chama do Início</h3>
-                <p class="">Havia um tempo em que as estrelas brilhavam em perfeita harmonia, ligadas por pactos antigos e juramentos esquecidos. Mas a história não é feita apenas de luz — nas profundezas do vazio, o silêncio começou a se mover. Quando a Primeira Chama foi acesa, ela não trouxe apenas esperança, mas também o eco de forças que dormiam há eras. Cidades flutuantes erguidas sobre oceanos de névoa, templos forjados em cristais de energia, reinos que prosperaram sem imaginar que eram apenas peças de um tabuleiro muito maior. Agora, sinais voltam a se manifestar: constelações se alinham de forma impossível, e o vento carrega sussurros em línguas mortas. Os mais antigos lembram. Os jovens sentem. Algo desperta nas margens do cosmos. A Chama do Início nunca foi apenas um símbolo — foi um chamado. Um aviso de que o tempo da quietude terminou. Quando o primeiro brilho cortar os céus novamente, aqueles que ousarem responder serão forjados em fogo e sombra. O que começou como uma lenda retornará como destino.</p>
-            </div>
-            <button class="text-2xl font-medium bg-black text-white py-4 w-full rounded-lg focus:ring-2 cursor-pointer focus:ring-amber-300">Explorar o Prólogo</button>
-        </article>
 
-        <article class="bg-slate-200 py-8 px-12 flex flex-col justify-between rounded-lg">
-            <div>
-                <h3 class="text-4xl font-semibold mb-6">Ecos da Resistência</h3>
-                <p class="">Durante séculos, acreditou-se que a Ordem Suprema havia triunfado, sepultando sob muralhas de ferro qualquer sussurro de oposição. Mas as ideias mais perigosas são aquelas que sobrevivem no escuro — transmitidas de geração em geração, costuradas em canções proibidas e gravadas nas ruínas de templos queimados. Quando as torres começaram a ruir, ninguém sabia de onde vinha o golpe. Não eram exércitos organizados, mas ecos. Fragmentos de coragem espalhados em cada canto do império. Uma criança que cresceu nas docas, uma cartógrafa exilada, um guerreiro que desertou — nomes comuns, almas decididas. Cada passo que dão é um desafio à tirania. Cada palavra sussurrada reacende brasas escondidas. Eles não lutam por glória, nem por poder, mas pela liberdade de escolher o próprio destino. Agora, nas vielas e nos céus, sinais se multiplicam. A Resistência não é um exército. É uma ideia. E ideias não sangram. Não morrem. Elas ecoam.</p>
-            </div>
-            <button class="text-2xl font-medium bg-black text-white py-4 w-full rounded-lg focus:ring-2 cursor-pointer focus:ring-amber-300">Conhecer os Personagens</button>
-        </article>
 
-        <article class="bg-slate-200 py-8 px-12 flex flex-col justify-between rounded-lg">
-            <div>
-                <h3 class="text-4xl font-semibold mb-6">O Último Horizonte</h3>
-                <p class="">Quando o véu entre mundos se fragmenta, a realidade começa a se contorcer em silêncios impossíveis. O que antes era horizonte torna-se portal. O que era chão firme transforma-se em mar de sombras. Por eras, acreditou-se que a fronteira final seria o fim de tudo. Mas agora, está claro: é apenas o começo. Ventos celestes arrastam memórias de civilizações que nunca existiram neste tempo. Portos estelares abandonados tremem com a aproximação de algo que não pertence a nenhuma era conhecida. Os Guardiões do Crepúsculo — aqueles que juraram proteger os limiares — sabem que este não é mais um ciclo comum. É o último. Na escuridão além da linha do universo, uma presença observa, paciente. Quando o primeiro portal for aberto, nada permanecerá intocado. Escolher atravessar ou permanecer será mais do que uma decisão: será uma sentença. E apenas os que olharem para o abismo sem desviar o olhar terão o direito de escrever o novo alvorecer.</p>
-            </div>
-            <button class="text-2xl font-medium bg-black text-white py-4 w-full rounded-lg focus:ring-2 cursor-pointer focus:ring-amber-300">Entrar na Jornada</button>
-        </article>
+    <main class="max-w-5xl pt-10 pl-10">
+       
+        <section class="mb-10">
+            <figure>
+                <img src="./assets/img/banner.png" alt="">
+            </figure>
+        </section>
 
-    </section>
+
+        <section>
+            <h3 class="mb-6 text-xl font-semibold">Compre pontos e distribua como quiser</h3>
+            <div class="grid grid-cols-3 gap-8">
+                <article class="p-6 border border-zinc-400 rounded-lg  max-w-80 flex flex-col gap-4">
+                    <img src="./assets/img/card-1.png" alt="" class="">
+                    <p class="text-sm text-stone-500 leading-[20px]">Desenvolvimento, consultoria ou UX/UI para seus projetos decolarem.</p>
+                    <div class="mt-auto">
+                        <div class="flex justify-between items-center leading-[24px] mb-1 self-baseline-last">
+                            <strong class="">Comprar créditos</strong>
+                            <i class="fa-solid fa-angle-right"></i>
+                        </div>
+                        <p class="text-sm text-stone-500 leading-[20px]">5 créditos por R$10.000,00</p>
+                    </div>
+                </article>
+
+
+                <article class="p-6 border border-zinc-400 rounded-lg max-w-80 flex flex-col gap-4">
+                    <img src="./assets/img/card-2.png" alt="" class="">
+                    <p class="text-sm text-stone-500 leading-[20px]">Desenvolvimento de projeto de ponta a ponta, com nível de complexidade média com super desconto.</p>
+                    <div class="mt-auto">
+                        <div class="flex justify-between items-center leading-[24px] mb-1 self-baseline-last">
+                            <strong class="">Comprar créditos</strong>
+                            <i class="fa-solid fa-angle-right"></i>
+                        </div>
+                        <p class="text-sm text-stone-500 leading-[20px]">21 créditos por R$120.000,00</p>
+                    </div>
+                </article>
+
+
+                <article class="p-6 border border-zinc-400 rounded-lg max-w-80 flex flex-col gap-4">
+                    <img src="./assets/img/card-3.png" alt="" class="">
+                    <p class="text-sm text-stone-500 leading-[20px]">Descontos cumulativos para projetos em Wordpress para 2025.</p>
+                    <div class="mt-auto">
+                        <div class="flex justify-between items-center leading-[24px] mb-1 self-baseline-last">
+                            <strong class="">Comprar créditos</strong>
+                            <i class="fa-solid fa-angle-right"></i>
+                        </div>
+                        <p class="text-sm text-stone-500 leading-[20px]">21 créditos por R$12.000,00</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+
+    </main>
+
+
 </body>
 </html>
