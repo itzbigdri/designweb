@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="font-[Sora]">
+    <header class="bg-neutral-100 flex justify-between px-8 py-4 border-b border-stone-300">
+        <a href="#"><img src="./assets/img/awe-header.svg" alt="Logo da agencia web escolar" class="h-9"></a>
+        <div class="flex gap-2">
+            <img src="./assets/img/pfp-john-doe.svg" alt="Foto de perfil de John Doe" class="w-8">
+            <div class="flex flex-col">
+                <strong class="text-xs leading-[17px] text-neutral-800">John Doe</strong>
+                <p class="text-xs text-zinc-500 font-normal leading-[17px]">Agência Web</p>
+            </div>
+        </div>
+    </header>
+
+    <section class="flex ">
+        <aside class="py-8 w-66 border-r border-stone-300">
+            <nav class="pl-8">
+                <h1 class="text-2xl font-semibold text-neutral-600 mb-8">Canal do cliente</h1>
+                <ul class="flex flex-col gap-8 text-sm text-zinc-500">
+                    <li class="">
+                        <h5 class="font-bold mb-2"><i class="fa-solid fa-shop mr-2 text-blue-950"></i><span class="">Loja de projetos</span></h5>
+                        <ul>
+                            <li class="px-8 py-2"><a href="index.html" class="">Dashboard</a></li>
+                            <li class="px-8 py-2 font-bold text-sky-800"><a href="#" class="">Compra de créditos</a></li>
+                            <li class="px-8 py-2"><a href="#" class="">Concluídos</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <h5 class="font-bold"><i class="fa-solid fa-chart-pie mr-2 text-blue-950"></i><span>Gestão de projetos</span></h5>
+                    </li>
+
+                    <li>
+                        <h5 class="font-bold"><i class="fa-solid fa-bullhorn mr-2 text-blue-950"></i><span>Campanhas</span></h5>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="pt-10 grow">
+            <section><a href="#">Loja de projetos</a> > <a href="#">Comprar de créditos</a></section>
+        </main>
+    </section>
+</body>
+</html>
