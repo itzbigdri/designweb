@@ -9,79 +9,96 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body class="font-[Sora]">
-    <header>
+    <header class="bg-neutral-100 flex justify-between px-8 py-4 border-b border-stone-300">
         <a href="#"><img src="./assets/img/awe-header.svg" alt="Logo da agencia web escolar" class="h-9"></a>
-        <div class="inline-grid grid-cols-[auto_1fr] gap-x-2 items-start">
-            <img src="./assets/img/pfp-john-doe.png" alt="Foto de perfil de John Doe" class="w-8 h-auto object-cover block">
-            <strong class="text-xs leading-[17px]">John Doe</strong>
-            <p class="text-xs text-stone-500 font-normal leading-[17px]">Agência Web</p>
+        <div class="flex gap-2">
+            <img src="./assets/img/pfp-john-doe.svg" alt="Foto de perfil de John Doe" class="w-8">
+            <div class="flex flex-col">
+                <strong class="text-xs leading-[17px] text-neutral-800">John Doe</strong>
+                <p class="text-xs text-zinc-500 font-normal leading-[17px]">Agência Web</p>
+            </div>
         </div>
     </header>
 
-    <aside>
-        <details>
-            <summary>Loja de projetos</summary>
-            <ul> 
-                <li>Dashboard</li>
-                <li>Compra de créditos</li>
-                <li>Concluídos</li>
-            </ul>
-        </details>
-    </aside>
+    <section class="flex">
+        <aside class="py-8">
+            <h1>Canal do cliente</h1>
+            <nav>
+                <ul>
+                    <li>
+                        <h5><i class="fa-solid fa-shop"></i></h5>
+                        <ul>
+                            <li><a href="#">Dashboard</a></li>
+                            <li><a href="#">Compra de créditos</a></li>
+                            <li><a href="#">Concluídos</a></li>
+                        </ul>
+                    </li>
 
-    <main class="max-w-5xl pt-10 pl-10">
-       
-        <section class="mb-10">
-            <figure>
-                <img src="./assets/img/banner.png" alt="Black friday. A maior oferta de projetos awe do ano.">
-            </figure>
-        </section>
+                    <li>
+                        <h5><i class="fa-solid fa-chart-pie"></i><span>Gestão de projetos</span></h5>
+                    </li>
+
+                    <li>
+                        <h5><i class="fa-solid fa-bullhorn"></i><span>Campanhas</span></h5>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="pt-10 pl-10">
+        
+            <section class="mb-10 max-w-5xl">
+                <figure>
+                    <img src="./assets/img/banner.png" alt="Black friday. A maior oferta de projetos awe do ano.">
+                </figure>
+            </section>
 
 
-        <section class="mb-94">
-            <h3 class="mb-6 text-xl font-semibold">Compre pontos e distribua como quiser</h3>
-            <div class="grid grid-cols-3 gap-8">
-                <article class="p-6 border border-zinc-400 rounded-lg  max-w-80 flex flex-col gap-4">
-                    <img src="./assets/img/card-1.png" alt="Design de app">
-                    <p class="text-sm text-stone-500 leading-[20px]">Desenvolvimento, consultoria ou UX/UI para seus projetos decolarem.</p>
-                    <div class="mt-auto">
-                        <div class="flex justify-between items-center leading-[24px] mb-1 self-baseline-last">
-                            <strong class="">Comprar créditos</strong>
-                            <i class="fa-solid fa-angle-right"></i>
+            <section class="mb-94 max-w-5xl">
+                <h3 class="mb-6 text-xl font-semibold">Compre pontos e distribua como quiser</h3>
+                <div class="grid grid-cols-3 gap-8">
+                    <article class="p-6 border border-stone-300 rounded-lg  max-w-80 flex flex-col gap-4">
+                        <img src="./assets/img/card-1.png" alt="Design de app">
+                        <p class="text-sm text-stone-500 leading-[20px]">Desenvolvimento, consultoria ou UX/UI para seus projetos decolarem.</p>
+                        <div class="mt-auto">
+                            <div class="flex justify-between items-center leading-[24px] mb-1 self-baseline-last">
+                                <strong class="">Comprar créditos</strong>
+                                <i class="fa-solid fa-angle-right"></i>
+                            </div>
+                            <p class="text-sm text-stone-500 leading-[20px]">5 créditos por R$10.000,00</p>
                         </div>
-                        <p class="text-sm text-stone-500 leading-[20px]">5 créditos por R$10.000,00</p>
-                    </div>
-                </article>
+                    </article>
 
-                <article class="p-6 border border-zinc-400 rounded-lg max-w-80 flex flex-col gap-4">
-                    <img src="./assets/img/card-2.png" alt="Sistema PVD_">
-                    <p class="text-sm text-stone-500 leading-[20px]">Desenvolvimento de projeto de ponta a ponta, com nível de complexidade média com super desconto.</p>
-                    <div class="mt-auto">
-                        <div class="flex justify-between items-center leading-[24px] mb-1 self-baseline-last">
-                            <strong class="">Comprar créditos</strong>
-                            <i class="fa-solid fa-angle-right"></i>
+                    <article class="p-6 border border-stone-300 rounded-lg max-w-80 flex flex-col gap-4">
+                        <img src="./assets/img/card-2.png" alt="Sistema PVD_">
+                        <p class="text-sm text-stone-500 leading-[20px]">Desenvolvimento de projeto de ponta a ponta, com nível de complexidade média com super desconto.</p>
+                        <div class="mt-auto">
+                            <div class="flex justify-between items-center leading-[24px] mb-1 self-baseline-last">
+                                <strong class="">Comprar créditos</strong>
+                                <i class="fa-solid fa-angle-right"></i>
+                            </div>
+                            <p class="text-sm text-stone-500 leading-[20px]">21 créditos por R$120.000,00</p>
                         </div>
-                        <p class="text-sm text-stone-500 leading-[20px]">21 créditos por R$120.000,00</p>
-                    </div>
-                </article>
+                    </article>
 
-                <article class="p-6 border border-zinc-400 rounded-lg max-w-80 flex flex-col gap-4">
-                    <img src="./assets/img/card-3.png" alt="Sites Wordpress">
-                    <p class="text-sm text-stone-500 leading-[20px]">Descontos cumulativos para projetos em Wordpress para 2025.</p>
-                    <div class="mt-auto">
-                        <div class="flex justify-between items-center leading-[24px] mb-1 self-baseline-last">
-                            <strong class="">Comprar créditos</strong>
-                            <i class="fa-solid fa-angle-right"></i>
+                    <article class="p-6 border border-stone-300 rounded-lg max-w-80 flex flex-col gap-4">
+                        <img src="./assets/img/card-3.png" alt="Sites Wordpress">
+                        <p class="text-sm text-stone-500 leading-[20px]">Descontos cumulativos para projetos em Wordpress para 2025.</p>
+                        <div class="mt-auto">
+                            <div class="flex justify-between items-center leading-[24px] mb-1 self-baseline-last">
+                                <strong class="">Comprar créditos</strong>
+                                <i class="fa-solid fa-angle-right"></i>
+                            </div>
+                            <p class="text-sm text-stone-500 leading-[20px]">21 créditos por R$12.000,00</p>
                         </div>
-                        <p class="text-sm text-stone-500 leading-[20px]">21 créditos por R$12.000,00</p>
-                    </div>
-                </article>
-            </div>
-        </section>
-    </main>
+                    </article>
+                </div>
+            </section>
 
-    <footer class="py-4 px-14 border-t border-zinc-400 text-right">
-        <img src="assets/img/awe.svg" alt="logo da agência web escolar" class="h-5 inline-block">
-    </footer>
+            <aside class="py-4 px-14 border-t border-stone-300 text-right">
+                <img src="assets/img/awe.svg" alt="logo da agência web escolar" class="h-5 inline-block">
+            </aside>
+        </main>
+    </section>
 </body>
 </html>
