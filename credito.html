@@ -20,8 +20,8 @@
         </div>
     </header>
 
-    <section class="flex ">
-        <aside class="py-8 w-66 border-r border-stone-300">
+    <section class="flex">
+        <aside class="py-8 basis-66 border-r border-stone-300">
             <nav class="pl-8">
                 <h1 class="text-2xl font-semibold text-neutral-600 mb-8">Canal do cliente</h1>
                 <ul class="flex flex-col gap-8 text-sm text-zinc-500">
@@ -45,69 +45,89 @@
             </nav>
         </aside>
 
-        <main class="pt-10 grow">
-            <div><a href="#">Loja de projetos</a> > <a href="#">Comprar de créditos</a></div>
-            <h1>Compra de pontos base</h1>
-            <hr>
-            <section>
-                <article>
-                    <h4>Limite mensal</h4>
-                    <p>Confira a quantidade de pontos disponível para compra</p>
-                    <div id="barra">
-                        <div></div>
-                        <div></div>
-                    </div>
-                    <div>
-                        <div>
-                            <small>Comprado esse mês</small>
-                            <strong>100 créditos</strong>
+        <main class="pt-10 flex-1">
+            <section class="px-8 mb-48">
+                <div class="text-sm text-gray-700 flex gap-1 items-center mb-4">
+                    <a href="#" class="underline">Loja de projetos</a>
+                    <i class="fa-solid fa-angle-right"></i> 
+                    <a href="#" class="underline">Comprar de créditos</a>
+                </div>
+                <h1 class="text-2xl font-semibold mb-4">Compra de pontos base</h1>  
+                <hr class="mb-8 border-zinc-300">
+                <section class="grid grid-cols-5 max-w-5xl gap-8 mb-20">
+                    <article class="bg-neutral-100 p-6 col-span-3 rounded-lg">
+                        <h4 class="text-lg font-semibold mb-4">Limite mensal</h4>
+                        <p class="text-sm mb-4">Confira a quantidade de pontos disponível para compra</p>
+                        <div id="barra" class="w-full h-2 bg-stone-300 rounded-md mb-4 relative">
+                            <div class="w-6/10 h-2 bg-sky-400 rounded-md absolute"></div>
+                            <div class="w-5/10 h-2 bg-sky-800 rounded-md absolute"></div>
                         </div>
-                        <div>
-                            <small>Seu limite mensal</small>
-                            <strong>2000 créditos</strong>
+                        <div class="flex justify-between">
+                            <div class="flex flex-col">
+                                <small class="text-xs text-neutral-400">Comprado esse mês</small>
+                                <strong class="text-xs">100 créditos</strong>
+                            </div>
+                            <div class="flex flex-col items-end">
+                                <small class="text-xs text-neutral-400">Seu limite mensal</small>
+                                <strong class="text-xs">2000 créditos</strong>
+                            </div>
                         </div>
-                    </div>
-                </article>
-                <article>
-                    <h4>Informações</h4>
-                    <div>
-                        <i class="fa-solid fa-credit-card"></i>
-                        <p>Valor mínimo de <strong>100 créditos</strong></p>
-                    </div>
-                    <div>
-                        <i class="fa-solid fa-calendar"></i>
-                         <p>Validade <strong>24 meses</strong></p>
-                    </div>
-                    <div>
-                        <i class="fa-solid fa-dollar-sign"></i>
-                        <p>Limite de compra mensal <strong>2000 créditos</strong></p>
-                    </div>
-                </article>
-                <article>
-                    <div>
-                        <h4></h4>
-                        <div>
-                            <button><i class="fa-solid fa-minus"></i></button>
-                            <strong></strong>
-                            <button><i class="fa-solid fa-plus"></i></button>
+                    </article>
+
+                    <article class="bg-neutral-100 p-6 col-span-2 rounded-lg">
+                        <h4 class="text-lg font-semibold mb-4">Informações</h4>
+                        <p class="mb-4">
+                            <i class="fa-solid fa-credit-card mr-2 text-sky-800"></i>
+                            <span class="text-sm">Valor mínimo de <strong>100 créditos</strong></span>
+                        </p>
+                        <p class="mb-4">
+                            <i class="fa-solid fa-calendar mr-2 text-sky-800"></i>
+                            <span class="text-sm">Validade <strong>24 meses</strong></span>
+                        </p>
+                        <p class="">
+                            <i class="fa-solid fa-dollar-sign mr-2 text-sky-800"></i>
+                            <span class="text-sm">Limite de compra mensal <strong>2000 créditos</strong></p>
+                        </p>
+                    </article>
+
+                    <article class="bg-neutral-100 p-6 col-span-5 flex rounded-lg">
+                        <div class="w-88 mr-35">
+                            <h4 class="text-lg font-semibold mb-8">Quantidade de créditos para compra</h4>
+                            <div class="flex justify-around items-center">
+                                <button class="w-8 h-8 border-2 border-sky-800 rounded-full">
+                                    <i class="fa-solid fa-minus text-sky-800"></i>
+                                </button>
+                                <strong class="text-4xl">100</strong>
+                                <button class="w-8 h-8 border-2 border-sky-800 rounded-full">
+                                    <i class="fa-solid fa-plus text-sky-800"></i>
+                                </button>
+                            </div>
+                            <hr class="border-zinc-300 w-48 mx-auto mt-2 mb-4">
+                            <small class="text-sm text-gray-600 justify-center block w-full text-center">Digite o valor aproximado</small>
                         </div>
-                        <small>Digite o valor aproximado</small>
-                    </div>
-                    <div>
-                        <h4>Total em reais</h4>
-                        <strong>R$20.000,00</strong>
-                    </div>
-                </article>
+                        <div class="px-6">
+                            <h4 class="text-lg font-semibold mb-8">Total em reais</h4>
+                            <strong class="text-4xl">R$20.000,00</strong>
+                        </div>
+                    </article>
+                </section>
+
+                <h3 class="flex items-center">
+                    <span class="mr-2 text-lg font-semibold">Mais informações sobre o produto</span>
+                    <i class="fa-solid fa-angle-down text-sky-800 text-lg"></i></h3>
+                <hr class="my-3 border-zinc-300">
+                <small class="text-sm block w-198 text-neutral-400"><strong class="text-neutral-600">ATENÇÃO:</strong> A transferência dos pontos comprados para programas parceiros (Milhas) depende da elegibilidade do seu cartão de crédito. Consulte os cartões elegíveis na página do produto a partir do menu Viagens - Programas Parceiros.</small>
             </section>
 
-            <h3>Mais informações sobre o produto <i class="fa-solid fa-angle-down"></i></h3>
-            <hr>
-            <span><strong>ATENÇÃO:</strong> A transferência dos pontos comprados para programas parceiros (Milhas) depende da elegibilidade do seu cartão de crédito. Consulte os cartões elegíveis na página do produto a partir do menu Viagens - Programas Parceiros.</span>
-            
-            <section>
-                <button>Voltar</button>
-                <button>Adicionar ao carrinho</button>
-                <button>Continuar <i class="fa-solid fa-arrow-right"></i></button>
+            <section class="py-6 px-8 flex justify-between border-t border-zinc-300">
+                <button class="w-40 py-3 px-6 font-semibold text-sky-800 cursor-pointer">Voltar</button>
+                <div>
+                    <button class="w-57 px-6 py-3 font-semibold border border-sky-800 text-sky-800 rounded-md cursor-pointer">Adicionar ao carrinho</button>
+                    <button class="w-57 px-6 py-3 font-semibold rounded-md bg-sky-800 text-white cursor-pointer">
+                        <span>Continuar</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
             </section>
         </main>
     </section>
