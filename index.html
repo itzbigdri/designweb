@@ -12,7 +12,7 @@
 
     <header class="navbar max-w-7xl mx-auto py-8 max-md:px-8">
         <figure class="flex-1">
-            <img class="max-md:max-w-36" src="assets/img/logo.svg" alt="Logo de InfoWeb by turma InfoWebeti">
+            <img class="max-md:max-w-36 max-sm:max-w-28" src="assets/img/logo.svg" alt="Logo de InfoWeb by turma InfoWebeti">
         </figure>
         <nav class="flex-none">
             <menu class="dropdown dropdown-end">
@@ -27,18 +27,18 @@
             </menu>
         </nav>
     </header>
-    <main class="container max-w-7xl mx-auto">
+    <main class="container max-w-7xl mx-auto max-md:max-w-full">
 
     <!-- hero -->
-        <section class="hero bg-gray-100 py-32 px-4 rounded-lg">
+        <section class="hero bg-gray-100 py-32 px-4 rounded-lg max-md:py-24">
             <div class="hero-content text-center">
                 <div>
-                    <h1 class="text-5xl max-w-140 font-semibold">Depois de muita espera, ela finalmente chegou!</h1>
+                    <h1 class="text-5xl max-w-140 font-semibold max-md:text-3xl">Depois de muita espera, ela finalmente chegou!</h1>
                     <p class="my-10 max-w-140">O formulário para aquisição da camisa está oficialmente aberto! Com um design original e dois modelos únicos, você vai poder mostrar todo o seu orgulho de fazer parte dessa turma incrível!</p>
 
                     <div class="flex justify-center gap-4">
-                        <a href="#" class="btn btn-info text-white btn-lg">Ser feliz agora</a>
-                        <a href="#" class="btn btn-info text-white btn-lg">Ficar triste</a>
+                        <a href="#" class="btn btn-info text-white btn-md md:btn-lg">Ser feliz agora</a>
+                        <a href="#" class="btn btn-info text-white btn-md md:btn-lg">Ficar triste</a>
                     </div>
                 </div>
             </div>
@@ -46,49 +46,44 @@
   
     <!-- destaques -->
         <section class="flex gap-20 my-20 text-gray-500">
-            <div class="flex gap-4 items-baseline">
-                <i class="fa-solid fa-chevron-right text-sm"></i>
-                <div>
-                    <strong>Ela é bonita</strong>
-                    <p>Além de linda, ela é a mais top.</p>
+            <div class="join join-vertical bg-base-100 max-w-9/10 w-300 mx-auto">
+                <div class="collapse collapse-arrow join-item border-base-300 border">
+                    <input type="checkbox" name="my-accordion-4" checked="checked" />
+                    <div class="collapse-title font-semibold">Ela é bonita?</div>
+                    <div class="collapse-content text-sm">Além de linda, ela é a mais top.</div>
                 </div>
-            </div>
-
-            <div class="flex gap-4 items-baseline">
-                <i class="fa-solid fa-chevron-right text-sm"></i>
-                <div>
-                    <strong>O azul destaque</strong>
-                    <p>O azul royal ficou para trás. Contemple o novo azul esmeralda.</p>
+                <div class="collapse collapse-arrow join-item border-base-300 border">
+                    <input type="checkbox" name="my-accordion-4" />
+                    <div class="collapse-title font-semibold">O azul é destaque?</div>
+                    <div class="collapse-content text-sm">O azul royal ficou para trás. Contemple o novo azul esmeralda.</div>
                 </div>
-            </div>
-            <div class="flex gap-4 items-baseline">
-                <i class="fa-solid fa-chevron-right text-sm"></i>
-                <div>
-                    <strong>Webeti</strong>
-                    <p>O nosso mascote é um gênio da informática.</p>
+                <div class="collapse collapse-arrow join-item border-base-300 border">
+                    <input type="checkbox" name="my-accordion-4" />
+                    <div class="collapse-title font-semibold">Porque webeti?</div>
+                    <div class="collapse-content text-sm">O nosso mascote é um sapo gênio da informática.</div>
                 </div>
             </div>
         </section>
      <!-- mockup da camiseta da turma -->
         <figure><img src="assets/img/mockup.png" class="w-full" alt="Imagem destaque da camiseta"></figure>
-        <div class="w-155 text-center mx-auto mt-16 mb-12">
-            <h2 class="text-5xl font-semibold mb-6 ">Alunos que já compraram.</h2>
-            <p class="text-xl">Junte-se aos milhares de alunos de info que já estão vestindo a nossa camiseta linda e maravilhosa.</p>
+        <div class="w-155 text-center mx-auto mt-16 mb-12 max-w-9/10">
+            <h2 class="text-5xl font-semibold mb-6 max-w-full max-md:text-3xl">Alunos que já compraram.</h2>
+            <p class="max-w-full">Junte-se aos milhares de alunos de info que já estão vestindo a nossa camiseta linda e maravilhosa.</p>
         </div>
 
      <!-- métricas -->
-        <section class="grid grid-cols-3 gap-4 text-center my-10 mb-16">
+        <section class="grid grid-cols-3 gap-4 text-center my-10 mb-16 max-md:grid-cols-1 max-md:gap-16">
             <div>
-                <h3 class="text-5xl mb-2 font-semibold text-gray-800">243+</h3>
-                <span class="text-xl text-gray-600">Alunos felizes</span>
+                <h3 class="text-5xl mb-2 font-semibold text-gray-800 max-md:text-3xl">243+</h3>
+                <span class="text-xl text-gray-600 max-md:text-base">Alunos felizes</span>
             </div>
             <div>
-                <h3 class="text-5xl mb-2 font-semibold text-gray-800">38,903+</h3>
-                <span class="text-xl text-gray-600">Alunos adquirindo</span>
+                <h3 class="text-5xl mb-2 font-semibold text-gray-800 max-md:text-3xl">38,903+</h3>
+                <span class="text-xl text-gray-600 max-md:text-base">Alunos adquirindo</span>
             </div>
             <div>
-                <h3 class="text-5xl mb-2 font-semibold text-gray-800">154+</h3>
-                <span class="text-xl text-gray-600">Alunos tristes</span>
+                <h3 class="text-5xl mb-2 font-semibold text-gray-800 max-md:text-3xl">154+</h3>
+                <span class="text-xl text-gray-600 max-md:text-base">Alunos tristes</span>
             </div>
         </section>
     </main>
