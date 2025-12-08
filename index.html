@@ -1,86 +1,48 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br" data-theme="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio Pessoal</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="assets/css/style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.min.css" rel="stylesheet">
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
-<body>
-    <header class="header">
-        <nav class="container space-between align-center">
-            <ul class="menu menu-navegacao unstyled-list flex-list">
-                <li>
-                    <a href="#" class="unstyled-link">Estudos de casos</a>
-                </li>
 
-                <li>
-                    <a href="#" class="unstyled-link">Trabalhos</a>
-                </li>
- 
-                <li>
-                    <a href="#" class="unstyled-link">Entre em contato</a>
-                </li>
-            </ul>
-            <ul class="menu menu-social unstyled-list flex-list">
-                <li>
-                    <a href="#">
-                        <i class="fa-brands fa-linkedin-in"></i>
-                    </a>
-                </li>
+<body class="min-h-screen p-10 flex flex-col items-center gap-8 bg-base-200">
+
+  <!-- ESTADO INICIAL: mensagem vazia -->
+  <div x-data="{ mensagem: '' }" class="w-full max-w-md">
     
-                    <li>
-                    <a href="#">
-                        <i class="fa-brands fa-behance"></i>
-                    </a>
-                </li>
-   
-                <li>
-                    <a href="#">
-                        <i class="fa-brands fa-twitter"></i>
-                    </a>
-                </li>
-                    
-            </ul>
-            <div class="responsive-menu">
-                <button class="menu-button"><i class="fa-solid fa-bars"></i></button>
-                <p class="body-2">Menu</p>
-            </div>
-        </nav>
-    </header>
+    <!-- 1. O INPUT (Escreve) -->
+    <div class="form-control mb-8">
+      <label class="label">
+        <span class="label-text font-bold">Sua Mensagem:</span>
+      </label>
+      
+      <textarea 
+        x-model="mensagem" 
+        class="textarea textarea-primary textarea-lg w-full"
+        placeholder="Digite aqui..."></textarea>
+        
+      <div class="label">
+        <span class="label-text-alt">
+            Letras: <span x-text="mensagem.length"></span>
+        </span>
+      </div>
+    </div>
 
-    <main>
+    <!-- 2. O RESULTADO (Lê) -->
+    <div class="card bg-base-100 shadow-xl border-2 border-primary">
+      <div class="card-body items-center text-center">
+        <h2 class="card-title text-2xl">Visualização</h2>
+        
+        <p x-show="mensagem.length === 0" class="text-gray-400 italic">
+            (Aguardando texto...)
+        </p>
 
-        <section class="container personal-section space-between align-center mb-64 gap-32">
-            <div class="left d-flex justify-center flex-column gap-32">
-                <div class="text-content">
-                    <div class="titles">
-                        <h1 class="heading-1">Rodrigo Filho</h1>
-                        <h3 class="heading-2">Desenvolvedor Full-Stack</h3>
-                    </div>
-                    <p class="body-2">Sou um Full Stack em formação: do layout ao banco de dados. Conecto front e back sem ruído, com código limpo e usabilidade no radar. Traduzo lógica em interface e interface em lógica. Sem enrolação: construo, testo e entrego.</p>
-                </div>
-                <button class="body-1">
-                    Vamos trabalhar juntos <i class="fa-solid fa-chevron-right"></i></i>
-                </button>
-            </div>
-            <figure class="right">
-                <img src="assets/img/perfil.jpeg" alt="Foto de Rodrigo Filho">
-            </figure>
-        </section>
+        <p x-text="mensagem" class="text-xl font-medium"></p>
+      </div>
+    </div>
 
-        <section class="center last-jobs flex-column">
-            <h5>Trabalhou em:</h5>
-            <ul class="d-flex job-list unstyled-list">
-                <li class="d-flex justify-center align-center"><img src="assets/img/img-job-1.png" alt="logo do clickup "></li>
-                <li class="d-flex justify-center align-center"><img src="assets/img/img-job-2.png" alt="logo do dropbox"></li>
-                <li class="d-flex justify-center align-center"><img src="assets/img/img-job-3.png" alt="logo do paychex"></li>
-                <li class="d-flex justify-center align-center "><img src="assets/img/img-job-4.png" alt="logo do elastic"></li>
-                <li class="d-flex justify-center align-center"><img src="assets/img/img-job-5.png" alt="logo do stripe"></li>
-            </ul>
-        </section>
+  </div>
 
-    </main>
 </body>
 </html>
