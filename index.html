@@ -24,10 +24,10 @@
             <button @click="tab = 'projetos'" class="btn btn-sm btn-ghost" :class="{ 'btn-active': tab === 'projetos' }">Projetos</button>
 
             <!-- Botão SOBRE -->
-            <button @click="tab = 'sobre'" class="btn btn-sm btn-ghost" :class="'btn-active: tab === 'sobre">Sobre</button>
+            <button @click="tab = 'sobre'" class="btn btn-sm btn-ghost" :class="{'btn-active': tab === 'sobre' }">Sobre</button>
 
             <!-- Botão CONTATO -->
-            <button @click="tab = 'contato'" class="btn btn-sm btn-ghost" :class="'btn-active: tab === 'contato">Contato</button>
+            <button @click="tab = 'contato'" class="btn btn-sm btn-ghost" :class="{'btn-active': tab === 'contato'}">Contato</button>
   
             <!-- Dark Mode Toggle -->
             <input type="checkbox" class="toggle" x-model="dark" />
