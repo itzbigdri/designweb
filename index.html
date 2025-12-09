@@ -1,97 +1,154 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" x-data="{ tab: 'home', dark: false }" :data-theme="dark ? 'dracula' : 'winter'">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 43</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />  
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-    <title>Landinpage - InfoWebeti</title>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
-<body>
+<body class="min-h-screen transition-colors">
+    
 
-    <header class="navbar max-w-7xl mx-auto py-8 max-md:px-8">
-        <figure class="flex-1">
-            <img class="max-md:max-w-36" src="assets/img/logo.svg" alt="Logo de InfoWeb by turma InfoWebeti">
-        </figure>
-        <nav class="flex-none">
-            <menu class="dropdown dropdown-end">
-                <div tabindex="0" role="button" class="btn btn-ghost m-1"><i class="fa-solid fa-bars text-2xl"></i></div>
-                <ul class="menu dropdown-content bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
-                    <li><a href="#sobre">Sobre</a></li>
-                    <li><a href="#professores">Professores</a></li>
-                    <li><a href="#alunos">Alunos</a></li>
-                    <li><a href="#projetos">Projetos</a></li>
-                    <li><a href="#documentos">Documentos</a></li>
-                </ul>
-            </menu>
-        </nav>
-    </header>
-    <main class="container max-w-7xl mx-auto">
+    '<nav class="navbar bg-base-100 shadow-lg px-8">
+        <div class="flex-1 font-bold text-xl">DevPortfolio</div>
+        
+        <div class="flex-none gap-2">
+            <!-- Botão HOME -->
+            <button @click="tab = 'home'"  class="btn btn-sm btn-ghost" :class="{ 'btn-active': tab === 'home' }">Home</button>
+        
+            <!-- Botão PROJETOS -->
+            <button @click="tab = 'projetos'" class="btn btn-sm btn-ghost" :class="{ 'btn-active': tab === 'projetos' }">Projetos</button>
 
-    <!-- hero -->
-        <section class="hero bg-gray-100 py-32 px-4 rounded-lg">
-            <div class="hero-content text-center">
-                <div>
-                    <h1 class="text-5xl max-w-140 font-semibold">Depois de muita espera, ela finalmente chegou!</h1>
-                    <p class="my-10 max-w-140">O formulário para aquisição da camisa está oficialmente aberto! Com um design original e dois modelos únicos, você vai poder mostrar todo o seu orgulho de fazer parte dessa turma incrível!</p>
+            <!-- Botão SOBRE -->
+            <button @click="tab = 'sobre'" class="btn btn-sm btn-ghost" :class="'btn-active: tab === 'sobre">Sobre</button>
 
-                    <div class="flex justify-center gap-4">
-                        <a href="#" class="btn btn-info text-white btn-lg">Ser feliz agora</a>
-                        <a href="#" class="btn btn-info text-white btn-lg">Ficar triste</a>
-                    </div>
-                </div>
-            </div>
-        </section>
+            <!-- Botão CONTATO -->
+            <button @click="tab = 'contato'" class="btn btn-sm btn-ghost" :class="'btn-active: tab === 'contato">Contato</button>
   
-    <!-- destaques -->
-        <section class="flex gap-20 my-20 text-gray-500">
-            <div class="flex gap-4 items-baseline">
-                <i class="fa-solid fa-chevron-right text-sm"></i>
-                <div>
-                    <strong>Ela é bonita</strong>
-                    <p>Além de linda, ela é a mais top.</p>
-                </div>
-            </div>
+            <!-- Dark Mode Toggle -->
+            <input type="checkbox" class="toggle" x-model="dark" />
+        </div>
+    </nav>
 
-            <div class="flex gap-4 items-baseline">
-                <i class="fa-solid fa-chevron-right text-sm"></i>
-                <div>
-                    <strong>O azul destaque</strong>
-                    <p>O azul royal ficou para trás. Contemple o novo azul esmeralda.</p>
+
+
+    <main class="p-10 max-w-5xl mx-auto">
+
+        <!-- SEÇÃO HOME -->
+        <div x-show="tab === 'home'" 
+             x-transition:enter.duration.500ms>
+             
+            <div class="hero min-h-[50vh] bg-base-200 rounded-box">
+                <div class="hero-content text-center">
+                    <div class="max-w-md">
+                        <h1 class="text-5xl font-bold">Olá, eu sou Dev</h1>
+                        <button @click="tab = 'contato'" 
+                                class="btn btn-primary mt-6">
+                            Fale Comigo
+                        </button>
+                    <div
                 </div>
             </div>
-            <div class="flex gap-4 items-baseline">
-                <i class="fa-solid fa-chevron-right text-sm"></i>
-                <div>
-                    <strong>Webeti</strong>
-                    <p>O nosso mascote é um gênio da informática.</p>
-                </div>
+    
+        </div>
+    
+        <!-- Outras seções (Projetos, Contato)... -->
+    
+    </main>
+
+    <!-- Projeto 1 -->
+    <div class="card bg-base-100 shadow-xl mb-4 mx-auto max-w-9/10" x-data="{ modal: false }" x-show="tab === 'projetos'">
+        <div class="card-body">
+            <h2 class="card-title">Projeto 1</h2>
+            <button @click="modal = true" class="btn btn-primary">Ver</button>
+        </div>
+      
+        <!-- O MODAL -->
+        <div x-show="modal" class="fixed inset-0 bg-black/80 flex justify-center items-center z-50" x-transition.opacity>
+             
+            <div @click.outside="modal = false" class="bg-base-100 p-8 rounded-lg">
+                <h3>O primeiro projeto</h3>
+                <button @click="modal = false" class="btn">X</button>
             </div>
-        </section>
-     <!-- mockup da camiseta da turma -->
-        <figure><img src="assets/img/mockup.png" class="w-full" alt="Imagem destaque da camiseta"></figure>
-        <div class="w-155 text-center mx-auto mt-16 mb-12">
-            <h2 class="text-5xl font-semibold mb-6 ">Alunos que já compraram.</h2>
-            <p class="text-xl">Junte-se aos milhares de alunos de info que já estão vestindo a nossa camiseta linda e maravilhosa.</p>
+        </div>
+    </div>
+
+    <!-- Projeto 2 -->
+    <div class="card bg-base-100 shadow-xl mb-4 mx-auto max-w-9/10" x-data="{ modal: false }" x-show="tab === 'projetos'">
+        <div class="card-body">
+            <h2 class="card-title">Projeto 2</h2>
+            <button @click="modal = true" class="btn btn-primary">Ver</button>
+        </div>
+      
+        <!-- O MODAL -->
+        <div x-show="modal" class="fixed inset-0 bg-black/80 flex justify-center items-center z-50" x-transition.opacity>
+             
+            <div @click.outside="modal = false" class="bg-base-100 p-8 rounded-lg">
+                <h3>O segundo projeto</h3>
+                <button @click="modal = false" class="btn">X</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Projeto 3 -->
+    <div class="card bg-base-100 shadow-xl mb-4 mx-auto max-w-9/10" x-data="{ modal: false }" x-show="tab === 'projetos'">
+        <div class="card-body">
+            <h2 class="card-title">Projeto 3</h2>
+            <button @click="modal = true" class="btn btn-primary">Ver</button>
+        </div>
+      
+        <!-- O MODAL -->
+        <div x-show="modal" class="fixed inset-0 bg-black/80 flex justify-center items-center z-50" x-transition.opacity>
+             
+            <div @click.outside="modal = false" class="bg-base-100 p-8 rounded-lg">
+                <h3>O terceiro projeto</h3>
+                <button @click="modal = false" class="btn">X</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Seção FAQ -->
+    <!-- P1 -->
+    <div x-show="tab === 'sobre'" class="mx-auto max-w-9/10">
+        <div class="collapse collapse-arrow bg-base-100 border border-base-300 mb-4">
+            <input type="radio" name="my-accordion" checked="checked" />
+            <div class="collapse-title font-semibold">How do I create an account?</div>
+            <div class="collapse-content text-sm">Click the "Sign Up" button in the top right corner and follow the registration process.</div>
         </div>
 
-     <!-- métricas -->
-        <section class="grid grid-cols-3 gap-4 text-center my-10 mb-16">
-            <div>
-                <h3 class="text-5xl mb-2 font-semibold text-gray-800">243+</h3>
-                <span class="text-xl text-gray-600">Alunos felizes</span>
-            </div>
-            <div>
-                <h3 class="text-5xl mb-2 font-semibold text-gray-800">38,903+</h3>
-                <span class="text-xl text-gray-600">Alunos adquirindo</span>
-            </div>
-            <div>
-                <h3 class="text-5xl mb-2 font-semibold text-gray-800">154+</h3>
-                <span class="text-xl text-gray-600">Alunos tristes</span>
-            </div>
-        </section>
-    </main>
-  
+        <!-- P2 -->
+        <div class="collapse collapse-arrow bg-base-100 border border-base-300 mb-4">
+            <input type="radio" name="my-accordion" />
+            <div class="collapse-title font-semibold">I forgot my password. What should I do?</div>
+            <div class="collapse-content text-sm">Click on "Forgot Password" on the login page and follow the instructions sent to your email.</div>
+        </div>
+
+        <!-- P3 -->
+        <div class="collapse collapse-arrow bg-base-100 border border-base-300 mb-4">
+            <input type="radio" name="my-accordion" />
+            <div class="collapse-title font-semibold">How do I update my profile information?</div>
+            <div class="collapse-content text-sm">Go to "My Account" settings and select "Edit Profile" to make changes.</div>
+        </div>
+    </div>
+
+    <!-- Seção Contato -->
+     <div class="flex justify-center items-center flex-col gap-4 " x-data="{email: '', msg: '', verif: false}" x-show="tab === 'contato'">
+        <fieldset class="fieldset w-75">
+            <legend class="fieldset-legend">Email</legend>
+            <input type="email" x-model="email" class="input w-75" placeholder="ex: mail@mail.com" />
+        </fieldset>
+        <fieldset class="fieldset w-75">
+            <legend class="fieldset-legend">Mensagem</legend>
+            <input type="text" x-model="msg" class="input w-75" placeholder="ex: Olá Mundo!" />
+        </fieldset>
+        <button class="btn btn-primary btn-md w-75" @click="verif = true; email=''; msg=''" :disabled="!email.includes('@') || msg.length < 5">Enviar</button>
+        <div x-show="verif" x-transition class="alert alert-success mt-4 shadow-lg">
+            <span>Mensagem enviada com sucesso!</span>
+        </div>
+     </div>
 </body>
 </html>
