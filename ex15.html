@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botão Like (Emoji)</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="//unpkg.com/alpinejs" defer></script>
+</head>
+<body>
+    <div x-data="{like: false, likes: 0}">
+        <p class="text-7xl" @click="like = !like; if(like===true){likes++}else{likes--}" x-text="like ? '❤️' : '🤍'"></p>
+        <p x-text="`Curtidas: ${likes}`"></p>
+    </div>
+</body>
+</html>
