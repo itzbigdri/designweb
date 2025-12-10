@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semáforo</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="//unpkg.com/alpinejs" defer></script>
+</head>
+<body>
+    <div x-data="{semaforo: 1}">
+        <span x-text="if(semaforo===1){return 'Verde'} else if(semaforo===2){return 'Amarelo'} else{return 'Vermelho'}" :class="if(semaforo===1){return 'text-green-700'}else if(semaforo===2){return 'text-amber-500'}else{return 'text-red-600'}"></span>
+        <button class="btn btn-primary" @click="if(semaforo===1){semaforo=2} else if(semaforo===2){semaforo=3} else{semaforo=1}">Mudar</button>
+    </div>
+</body>
+</html> 
