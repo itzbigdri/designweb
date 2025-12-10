@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabs (Abas) Simples</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="//unpkg.com/alpinejs" defer></script>
+</head>
+<body>
+    <div x-data="{tab: 1}">
+        <div class="tabs tabs-border">
+            <a class="tab" :class="tab === 1 ? 'tab-active' : ''" @click="tab = 1">Tab 1</a>
+            <a class="tab" :class="tab === 2 ? 'tab-active' : ''" @click="tab = 2">Tab 2</a>
+            <a class="tab" :class="tab === 3 ? 'tab-active' : ''" @click="tab = 3">Tab 3</a>
+        </div>
+
+        <div x-show="tab === 1" class="card-body border border-stone-300 w-65 rounded-md mt-4 ml-4">
+            <h1 class="card-title">A tab 1 foi selecionada!</h1>
+            <p>A primeira das 3 tabs foi selecionada por você</p>
+        </div>
+        
+        <div x-show="tab === 2" class="card-body border border-stone-300 w-65 rounded-md mt-4 ml-4">
+            <h1 class="card-title">A tab 2 foi selecionada!</h1>
+            <p>A segunda das 3 tabs foi selecionada por você</p>
+        </div>
+        
+        <div x-show="tab === 3" class="card-body border border-stone-300 w-65 rounded-md mt-4 ml-4">
+            <h1 class="card-title">A tab 3 foi selecionada!</h1>
+            <p>A terceira das 3 tabs foi selecionada por você</p>
+        </div>
+    </div>
+</body>
+</html>
