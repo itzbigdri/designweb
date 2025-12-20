@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Master</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="bg-base-300 h-screen w-full flex justify-center items-center" x-data="">
+    <article class="p-16 bg-white rounded-xl">
+        <div class="flex justify-between items-center gap-32 mb-6">
+            <h3 class="text-3xl font-bold">Minhas tarefas</h3>
+            <span class="badge bg-blue-200 text-blue-600 badge-soft font-bold rounded-xl" x-text="`${$store.sistema.qtdPendentes} pendentes`"></span>
+        </div>
+
+        <div class="flex gap-2 mb-6">
+            <input class="input grow" type="text" x-model="$store.sistema.texto" @keydown.enter="$store.sistema.criarTarefa()">
+            <button class="btn border-none bg-blue-500 hover:bg-blue-600" @click="$store.sistema.criarTarefa()"></button>
+        </div>
+
+        <div class="flex gap-2 mb-4">
+            <span class="badge badge-neutral font-bold rounded-xl cursor-pointer" :class="$store.sistema.visibilidade === 'todas' ? '' : 'badge-soft'" @click="$store.sistema.visibilidade = 'todas'">Todas</span>
+            <span class="badge badge-neutral font-bold rounded-xl cursor-pointer" :class="$store.sistema.visibilidade === 'pendentes' ? '' : 'badge-soft'" @click="$store.sistema.visibilidade = 'pendentes'">Pendentes</span>
+            <span class="badge badge-neutral font-bold rounded-xl cursor-pointer" :class="$store.sistema.visibilidade === 'feitas' ? '' : 'badge-soft'" @click="$store.sistema.visibilidade = 'feitas'">Feitas</span>
+        </div>
+
+        <div class="grid grid-cols-1 gap-3">
+            <template x-for="tarefa in $store.sistema.filtrarTarefas">
+                <div x-data="{hoverTarefa: false}" @mouseenter="hoverTarefa = true" @mouseleave="hoverTarefa = false" class="p-4 border rounded-md flex justify-between" :class="hoverTarefa ? 'border-stone-400' : 'border-stone-200'">
+                    <div class="flex gap-4">
+                        <input type="checkbox" class="checkbox checkbox-success rounded-sm" :class="tarefa.status ? 'border-green-500' : 'border-stone-300'" x-model="tarefa.status" autocomplete="off">
+                        <p class="" :class="tarefa.status ? 'line-through text-stone-400' : ''" x-text="tarefa.nome"></p>
+                    </div>
+                    <button x-show="hoverTarefa" class="hover:text-red-600 cursor-pointer" @click="$store.sistema.deletarTarefa(tarefa.id)"><i class="fa-solid fa-trash"></i></button>
+                </div>
+            </template>
+        </div>
+
+    </article>
+</body>
+</html>
