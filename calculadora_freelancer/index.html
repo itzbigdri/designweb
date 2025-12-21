@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Freelancer</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body x-data="">
+    <article class=" w-150 p-8 rounded-xl border-2 border-slate-200">
+        <div class="flex gap-4 items-center">
+            <div class="p-2 bg-green-100 inline-block font-bold text-green-700 text-2xl rounded-full"><i class="fa-solid fa-dollar-sign"></i></div>
+            <p class="text-xl text-slate-600 font-bold">Orçamento #001</p>
+        </div>
+
+        <hr class="border border-slate-200 my-8">
+
+        <div class="flex gap-2 mb-8">
+            <input type="text" class="input grow bg-slate-100" x-model="$store.sistema.nome">
+            <input type="number" class="input basis-35 bg-slate-100" x-model="$store.sistema.valor">
+            <button class="btn btn-success" @click="$store.sistema.addServico()"></button>   
+        </div>
+
+
+        <div class="grid grid-cols-1 gap-4">
+            <template x-for="servico in $store.sistema.servicos">
+                <div class="bg-slate-100 rounded-md p-4 text-md flex justify-between border border-slate-300 text-slate-600">
+                    <span class="font-medium" x-text="servico.nome"></span>
+                    <span class="font-bold" x-text="`R$ ${servico.valor}`"></span>
+                </div>
+            </template>
+        </div>
+
+        <div class="bg-slate-800 rounded-md p-4 font-bold text-lg flex justify-between mt-8">
+            <span class="text-slate-400">Total</span>
+            <span class="text-green-400" x-text="`R$ ${$store.sistema.total}`"></span>
+        </div>
+    </article>
+</body>
+</html>
